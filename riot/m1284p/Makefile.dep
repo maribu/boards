@@ -1,0 +1,10 @@
+USEMODULE += boards_common_atmega
+
+ifneq (,$(filter netdev_default,$(USEMODULE)))
+  USEMODULE += cc1101
+endif
+
+ifneq (,$(filter xtimer,$(USEMODULE)))
+  # Board not compatible with xtimer
+  USEMODULE += ztimer_xtimer_compat
+endif

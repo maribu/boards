@@ -1,0 +1,71 @@
+/**
+@defgroup    boards_m1284p Simple ATmega1284P breakout board
+@ingroup     boards
+@brief       Support for the "m1284p" ATmega1284P breakout board
+
+## Overview
+
+
+### MCU
+| MCU           | ATmega1284p                            |
+|:------------- |:-------------------------------------- |
+| Family        | AVR/ATmega                             |
+| Vendor        | Microchip (previously Atmel)           |
+| RAM           | 16KiB                                  |
+| Flash         | 128KiB                                 |
+| EEPROM        | 4KiB                                   |
+| Frequency     | 8MHz (up to 20MHz with external clock) |
+| Timers        | 3 (2x 8bit, 1x 16bit)                  |
+| ADCs          | 6 analog input pins                    |
+| UARTs         | 1                                      |
+| SPIs          | 1                                      |
+| I2Cs          | 1 (called TWI)                         |
+| Vcc           | 2.7V - 5.5V (when clocked at 8MHz)     |
+| Datasheet     | [Official datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42719-ATmega1284P_Datasheet.pdf) |
+
+## Flashing the Device
+
+In order to flash the ATmega1284P without a bootloader, an ISP programmer or
+a JTAG debugger is needed. Use the connectors labeled ISP or JTAG, respectively.
+
+To flash using an Atmel ICE and JTAG run:
+
+    make BOARD=m1284p flash
+
+To use the programmer `<FOOBAR>` instead, run:
+
+    make BOARD=m1284p PROGRAMMER=<FOOBAR> flash
+
+## Serial Terminal
+
+The USB-Mini-B socket will not only power the board, but also is connected to
+an integrated TTL adapter.
+
+## On-Chip Debugging
+
+In order to debug the ATmega1284P, an compatible debugger is needed. The Atmel
+ICE is the ~~cheapest~~ least expensive option currently available.
+
+Once the Atmel ICE is correctly connected, the ATmega1284P has the JTAG
+interface enabled, and the required software is installed, debugging can be
+started using
+
+    make debug
+
+#### Software Requirements
+
+In order to debug you'll need an GDB version with AVR support and
+[AVaRICE](http://avarice.sourceforge.net/). Note that AVaRICE sadly is not
+being actively maintained and the latest release will not compile on most
+systems. Thus, unless your distribution already ships a package of the SVN
+version of AVaRICE, you'll have to build the tool from source.
+
+### Fuse Settings
+
+The `JTAGEN` fuse has to be set in order to use the JTAG interface. The JTAG
+pins will no longer be available as GPIOs when this fuse is set. With the
+default settings the MCUs are preprogrammed during manufacturing, the `JTAGEN`
+fuse is already set. So with a new and unused package, you're ready directly
+ready to go.
+
+ */
