@@ -5,8 +5,5 @@ ifneq (,$(filter netdev_default,$(USEMODULE)))
 endif
 
 ifneq (,$(filter xtimer,$(USEMODULE)))
-  ifeq (,$(filter ztimer_xtimer_compat,$(USEMODULE)))
-    # Board is not compatible with xtimer due to 12 MHz core clock
-    USEMODULE += xtimer_on_ztimer
-  endif
+  USEMODULE += ztimer_xtimer_compat
 endif
