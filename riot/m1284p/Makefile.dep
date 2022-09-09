@@ -4,6 +4,12 @@ ifneq (,$(filter netdev_default,$(USEMODULE)))
   USEMODULE += cc1101
 endif
 
-ifneq (,$(filter xtimer,$(USEMODULE)))
-  USEMODULE += ztimer_xtimer_compat
+ifneq (,$(filter mtd,$(USEMODULE)))
+  USEMODULE += mtd_sdcard
+endif
+
+# default to using fatfs on SD card
+ifneq (,$(filter vfs_default,$(USEMODULE)))
+  USEMODULE += fatfs_vfs
+  USEMODULE += mtd
 endif
