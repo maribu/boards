@@ -3,3 +3,5 @@
 *-cache.lib
 *.net
 gerber
+production
+*-backups
