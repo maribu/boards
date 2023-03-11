@@ -10,4 +10,4 @@ endif
 
 include $(RIOTBOARD)/common/blxxxpill/Makefile.dep
 # stdio over USB would be nice, but I fail to get it working
-#include $(RIOTBOARD)/common/makefiles/stdio_cdc_acm.dep.mk
+include $(RIOTBOARD)/common/makefiles/stdio_cdc_acm.dep.mk
