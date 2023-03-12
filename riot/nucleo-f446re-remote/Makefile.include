@@ -1,0 +1,2 @@
+INCLUDES += -I$(RIOTBOARD)/nucleo-f446re/include
+include $(RIOTBOARD)/nucleo-f446re/Makefile.include

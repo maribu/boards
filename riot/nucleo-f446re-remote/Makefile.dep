@@ -1,0 +1,5 @@
+ifneq (,$(filter netdev_default,$(USEMODULE)))
+  USEMODULE += nrf24l01p_ng
+endif
+
+include $(RIOTBOARD)/nucleo-f446re/Makefile.dep
