@@ -1249,6 +1249,7 @@
     (uuid f9a1549b-e570-4fc6-a0d6-66ecd839af0f)
   )
 
+  (no_connect (at 82.55 77.47) (uuid 124c5127-7e55-4875-862a-9056ed543ae4))
   (no_connect (at 31.75 67.31) (uuid 23e04296-7904-41b5-aed4-68ec52e43639))
   (no_connect (at 82.55 87.63) (uuid 6203250e-0040-42df-95b4-8e0fce1dcf6b))
   (no_connect (at 31.75 74.93) (uuid 936d251f-a4d1-4304-97f1-c7725165f861))
@@ -1272,10 +1273,6 @@
   (wire (pts (xy 151.13 142.875) (xy 152.4 142.875))
     (stroke (width 0) (type default))
     (uuid 2103c1a4-8946-43df-9653-df1183589eed)
-  )
-  (wire (pts (xy 82.55 77.47) (xy 95.25 77.47))
-    (stroke (width 0) (type default))
-    (uuid 2cba3775-9abb-48ce-bdbd-5120b36cbf9a)
   )
   (wire (pts (xy 133.35 90.17) (xy 140.97 90.17))
     (stroke (width 0) (type default))
@@ -2684,31 +2681,6 @@
       (project "testing-shield"
         (path "/e57ba8ab-33c5-4264-a7ca-fe36cd423955"
           (reference "#PWR028") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+5V") (at 95.25 77.47 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 6ebcb958-ec95-4168-9096-0b8a7040790a)
-    (property "Reference" "#PWR04" (at 95.25 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+5V" (at 95.25 72.39 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 95.25 77.47 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 95.25 77.47 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid ce9de24f-0c7f-4310-b64b-933c4e0fcfb4))
-    (instances
-      (project "testing-shield"
-        (path "/e57ba8ab-33c5-4264-a7ca-fe36cd423955"
-          (reference "#PWR04") (unit 1)
         )
       )
     )
